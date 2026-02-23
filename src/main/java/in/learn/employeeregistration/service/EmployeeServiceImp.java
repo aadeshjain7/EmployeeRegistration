@@ -22,7 +22,8 @@ public class EmployeeServiceImp implements EmployeeService{
     private final EmployeeMapper employeeMapper;
 
     public List<EmployeeDto> getAll() {
-        List<EmployeeEntity> employeeEntities=employeeRepository.findAll();
+
+        System.out.println("Hi how u are doing");
 //        employeeMapper.employeeDtoList(employeeEntities);
        return employeeEntities.stream()
                .map(e->new EmployeeDto(e.getId(), e.getName(),e.getAge(),e.getEmail(),e.getSalary(),e.getDoj(),e.getRole(),e.isActive()))
